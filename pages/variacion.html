@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="..\js\formulas.js"></script>
+</head>
+<body>
+    <h1>El calculo a realizar es una variacion</h1>
+    <p>	Formula a utilizar:</p><br>
+<img src="..\images\variacion.png">
+
+    <p>Ingrese la cantidad TOTAL de elementos (n):</p>
+        <input type="number" name="n" id="n">
+        <br>
+    <p>Ingrese la cantidad de elementos a tomar (r):</p>
+        <input type="number" name="r" id="r">
+        <br>
+    <button onclick="calcularVariacion(document.getElementById('n').value,document.getElementById('r').value)" >Aceptar</button>
+
+    <div id="resultado"></div>
+    
+</body>
+</html>

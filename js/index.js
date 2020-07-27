@@ -1,0 +1,52 @@
+function comprobarElementos(){
+    if(document.getElementById('all').checked){
+        location.href="pages/permutacion.html"
+    }else if(document.getElementById('notAll').checked){
+        location.href="pages/variacion.html"
+    }
+}
+const boton = document.getElementById('botonaceptar')
+boton.addEventListener('click',function(){
+    if(document.getElementById('yes').checked){
+        //location.href="perovar.html"
+        document.write(`
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="card" style="width: 18rem; position: absolute;
+    /*nos posicionamos en el centro del navegador*/
+    top:50%;
+    left:50%;
+    /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+    margin-left:-200px;
+    /*indicamos que el margen superior, es la mitad de la altura*/
+    margin-top:-150px;
+    border:1px solid #808080;
+    padding:5px;">
+        <div class="card-body">
+          <h5 class="card-title">Se toman todos los elementos?</h5>
+            <input type="radio" name="elementos" id="all" value="all">Si
+            <br>
+            <input type="radio" name="elementos" id="notAll" value="notAll">No
+            <br>
+          <a id="botonaceptar2" onclick="comprobarElementos()" class="btn btn-primary">Aceptar</a>
+        </div>
+    </div>
+
+    <script src="js\index.js"></script>
+
+</body>
+</html>
+        `);
+    }else if(document.getElementById('no').checked){
+        location.href="pages/combinacion.html"
+    }
+});
